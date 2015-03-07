@@ -522,10 +522,10 @@ if(!String.prototype.formatNum) {
                 event.lines = lines_left;
             }
 
-            data.by_hour.push(event);
+            data.push(event);
         });
 
-        //var d = new Date('2013-03-14 13:20:00');
+        //var d = new Date('2013-03-11 09:00:00');
         //warn(d.getTime());
     };
 
@@ -666,7 +666,7 @@ if(!String.prototype.formatNum) {
                 event.start_day = 0;
             }
 
-            event.days = Math.ceil(event.days);
+            event.days = Math.floor(event.days);
             if(event.start_day + event.days > 7) {
                 event.days = 7 - (event.start_day);
             }
@@ -697,6 +697,7 @@ if(!String.prototype.formatNum) {
 
             // TODO if all day event
             if (event.days > 1) {
+                event.width = (event.days * 12.5);
                 events.all_day.push(event);
                 return;
             }

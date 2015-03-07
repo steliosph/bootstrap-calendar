@@ -340,6 +340,11 @@ hr {
 .cal-week-box .cal-week-box .cal-hours {
   font-weight: bolder;
 }
+.cal-week-box .cal-week-multiple-days {
+  height: 40px;
+  padding-top: 10px;
+  text-align: center;
+}
 .cal-week-box a.cal-week-link {
   display: block;
   height: 100%;
